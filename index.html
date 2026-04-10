@@ -1,4 +1,90 @@
-.rooms {
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คลองวาฬบีชรีสอร์ท</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* NAV */
+nav {
+  background: #0d3b66;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 40px;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* SECTION */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px;
+  background: #e63946;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #c1121f;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  background: #0d3b66;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+  .rooms {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -38,3 +124,100 @@
   font-size: 14px;
   color: #555;
 }
+</style>
+</head>
+
+<body>
+
+<nav>คลองวาฬบีชรีสอร์ท</nav>
+
+<div class="hero">
+  <h1>พักผ่อนริมทะเล<br>เงียบสงบ เป็นส่วนตัว</h1>
+</div>
+
+<section>
+  <h2>เกี่ยวกับเรา</h2>
+  <p>
+    คลองวาฬบีชรีสอร์ท ตั้งอยู่ติดทะเล บรรยากาศเงียบสงบ เหมาะสำหรับการพักผ่อน
+    ทั้งแบบครอบครัว คู่รัก หรือมาพักผ่อนคนเดียว
+  </p>
+</section>
+
+<section>
+  <h2>จุดเด่นของเรา</h2>
+  <div class="grid">
+    <div class="card">🌊 ติดทะเล เดินไม่กี่ก้าวถึงชายหาด</div>
+    <div class="card">🏡 บรรยากาศเงียบสงบ เป็นส่วนตัว</div>
+    <div class="card">📶 มี Wi-Fi และที่จอดรถ</div>
+    <div class="card">📍 เดินทางสะดวก ใกล้ตัวเมือง</div>
+  </div>
+</section>
+<section>
+  <h2>ห้องพักของเรา</h2>
+
+  <div class="rooms">
+
+    <div class="room-card">
+      <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a">
+      <div class="room-content">
+        <div class="room-title">ห้อง Standard</div>
+        <div class="icons">
+          <span>📶 Wi-Fi</span>
+          <span>🚿 น้ำอุ่น</span>
+          <span>📺 TV</span>
+          <span>❄️ แอร์</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+      <div class="room-content">
+        <div class="room-title">ห้อง Deluxe</div>
+        <div class="icons">
+          <span>📶 Wi-Fi</span>
+          <span>🚿 น้ำอุ่น</span>
+          <span>📺 TV</span>
+          <span>❄️ แอร์</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
+      <div class="room-content">
+        <div class="room-title">ห้อง Sea View</div>
+        <div class="icons">
+          <span>📶 Wi-Fi</span>
+          <span>🚿 น้ำอุ่น</span>
+          <span>📺 TV</span>
+          <span>❄️ แอร์</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section>
+  <h2>ติดต่อ / จองห้องพัก</h2>
+  <p>📞 โทร: 084-002-5137</p>
+
+  <a class="btn" href="tel:0840025137">โทรเลย</a>
+  <a class="btn" href="https://www.facebook.com/klongwanbeach" target="_blank">Facebook</a>
+  <a class="btn" href="https://maps.app.goo.gl/DQNfhA9Wc6G7Uuvr8" target="_blank">นำทาง</a>
+</section>
+
+<section>
+  <h2>แผนที่</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.380120629385!2d99.77907705518868!3d11.738248791850715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30fe8597323119a7%3A0x3cb51215269c563!2z4LiE4Lil4Lit4LiH4Lin4Liy4Lis4Lia4Li14LiK4Lij4Li14Liq4Lit4Lij4LmM4LiX!5e0!3m2!1sth!2sth!4v1775844837428!5m2!1sth!2sth"
+    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+</section>
+
+<footer>
+  © 2026 คลองวาฬบีชรีสอร์ท | Prachuap Khiri Khan
+</footer>
+
+</body>
+</html>
