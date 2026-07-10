@@ -305,16 +305,27 @@
         <span class="material-symbols-outlined text-[200px]">accessibility</span>
     </div>
 </div>
-            <div class="md:col-span-12 relative group overflow-hidden rounded-xl h-[800px] cottage-shadow">
-                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="พื้นที่สนามหญ้าและอาคารจัดเลี้ยงขนาดใหญ่ริมทะเลคลองวาฬ" src="images/bighome.jpg"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center text-center p-8">
-                    <div class="max-w-2xl">
-                        <h3 class="font-headline-md text-headline-md text-white mb-2">บ้านพักหลังใหญ่รองรับงานแต่งงาน & งานจัดเลี้ยงริมทะเล</h3>
-                        <p class="text-white/90 font-body-md">พร้อมเนรมิตวันสำคัญของคุณด้วยบ้านพักหลังใหญ่และพื้นที่เปิดโล่งริมชายหาด รองรับทั้งงานมงคลสมรส งานเลี้ยงสังสรรค์ภายในองค์กร หรือการรวมตัวของครอบครัวใหญ่</p>
-                    </div>
-                </div>
-            </div>
+            <!-- ปรับมาใช้ aspect-[2/1] บนหน้าจอขนาดกลางขึ้นไป (md:) และเอา h-[...] ออกทั้งหมดเพื่อให้สัดส่วนแม่นยำตามสัดส่วนภาพ 1774/887 -->
+<div class="md:col-span-12 relative group overflow-hidden rounded-xl aspect-[16/10] md:aspect-[2/1] w-full cottage-shadow">
+    
+    <!-- ภาพจะแสดงผลตามสัดส่วน 2:1 ครบถ้วน ไม่โดนบีบหรือครอปทิ้ง -->
+    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="พื้นที่สนามหญ้าและอาคารจัดเลี้ยงขนาดใหญ่ริมทะเลคลองวาฬ" src="images/bighome.webp"/>
+    
+    <!-- แถบเงาดำจางๆ ด้านล่างเพื่อให้ตัวอักษรอ่านง่ายขึ้น -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    
+    <!-- ข้อความจัดวางอยู่ด้านล่างอย่างสวยงาม -->
+    <div class="absolute inset-x-0 bottom-0 flex items-end justify-start p-6 md:p-12 z-10">
+        <div class="max-w-3xl text-left">
+            <h3 class="font-headline-md text-xl md:text-3xl font-bold text-white mb-2 md:mb-3 drop-shadow-md">
+                บ้านพักหลังใหญ่รองรับงานแต่งงาน & งานจัดเลี้ยงริมทะเล
+            </h3>
+            <p class="text-white/95 font-body-md text-sm md:text-lg leading-relaxed drop-shadow-sm">
+                พร้อมเนรมิตวันสำคัญของคุณด้วยบ้านพักหลังใหญ่และพื้นที่เปิดโล่งริมชายหาด รองรับทั้งงานมงคลสมรส งานเลี้ยงสังสรรค์ภายในองค์กร หรือการรวมตัวของครอบครัวใหญ่
+            </p>
+        </div>
+    </div>
+</div>
         </div>
     </section>
 
