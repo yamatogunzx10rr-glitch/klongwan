@@ -197,17 +197,22 @@
     </a>
 </div>
 
+<!-- คัดลอกไปวางแทนที่ <header> ตัวเดิมได้เลยครับ -->
 <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_20px_40px_-15px_rgba(0,102,135,0.05)] px-5 md:px-container-margin-desktop py-4 flex justify-between items-center transition-all duration-300">
     <div class="font-headline-md text-headline-md text-primary font-bold tracking-tight">คลองวาฬ บีชรีสอร์ท</div>
+    
+    <!-- เมนูหน้าจอคอมพิวเตอร์ (Desktop) -->
     <nav class="hidden md:flex gap-8 items-center">
-        <a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors duration-300" href="index.html">หน้าแรก</a>
+        <a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1 transition-colors duration-300" href="#">หน้าแรก</a>
         <a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors duration-300" href="room.html">ห้องพัก</a>
-        <a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1 transition-colors duration-300" href="facilities.html">สิ่งอำนวยความสะดวก</a>
+        <a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors duration-300" href="facilities.html">สิ่งอำนวยความสะดวก</a>
         <a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors duration-300" href="contact.html">ติดต่อเรา</a>
         <button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-lg hover:opacity-90 active:scale-95 transition-all">จองห้องพัก</button>
     </nav>
-    <button class="md:hidden text-primary" aria-label="เปิดเมนู">
-        <span class="material-symbols-outlined">menu</span>
+    
+    <!-- ปุ่มสามขีดสำหรับมือถือ (Mobile Menu Button) -->
+    <button id="menu-btn" class="block md:hidden text-primary p-2 active:scale-95 transition-transform" aria-label="เปิดเมนู">
+        <span class="material-symbols-outlined text-[28px]">menu</span>
     </button>
 </header>
 
@@ -400,5 +405,33 @@
         });
     });
 </script>
+<script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // ฟังก์ชันเปิดเมนู
+        menuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        });
+
+        // ฟังก์ชันปิดเมนู
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            mobileMenu.classList.remove('flex');
+            mobileMenu.classList.add('hidden');
+        });
+
+        // ปิดเมนูอัตโนมัติเมื่อมีการคลิกลิงก์ข้างใน
+        const menuLinks = mobileMenu.querySelectorAll('a, button:not(#close-btn)');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('flex');
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
