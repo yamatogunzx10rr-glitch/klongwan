@@ -222,6 +222,44 @@
     </button>
 </header>
 
+<!-- กล่องเมนูสำหรับมือถือ (Mobile Menu Drawer) อยู่ใต้ Header เสมอ -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-surface/98 backdrop-blur-md hidden flex-col pt-24 px-6 gap-6 transition-all duration-300">
+    <!-- ปุ่มปิดเมนูรูปกากบาท -->
+    <button id="close-btn" class="absolute top-4 right-5 text-primary p-2" aria-label="ปิดเมนู">
+        <span class="material-symbols-outlined text-[32px]">close</span>
+    </button>
+    
+    <!-- ลิงก์เมนูภายในมือถือ -->
+    <a class="font-headline-md text-xl text-primary border-b border-outline-variant/30 pb-3" href="#">หน้าแรก</a>
+    <a class="font-headline-md text-xl text-secondary hover:text-primary border-b border-outline-variant/30 pb-3" href="room.html">ห้องพัก</a>
+    <a class="font-headline-md text-xl text-secondary hover:text-primary border-b border-outline-variant/30 pb-3" href="facilities.html">สิ่งอำนวยความสะดวก</a>
+    <a class="font-headline-md text-xl text-secondary hover:text-primary border-b border-outline-variant/30 pb-3" href="contact.html">ติดต่อเรา</a>
+    
+    <button class="bg-primary text-on-primary w-full py-3 rounded-full font-label-lg mt-4 shadow-md">จองห้องพัก</button>
+</div>
+<!-- กล่องเมนูสำหรับมือถือ (Mobile Menu) -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-surface translate-x-full transition-transform duration-300 md:hidden flex flex-col pt-24 px-6 gap-6">
+    <!-- ปุ่มปิดเมนู -->
+    <button id="close-btn" class="absolute top-4 right-5 text-primary" aria-label="ปิดเมนู">
+        <span class="material-symbols-outlined text-[32px]">close</span>
+    </button>
+    
+    <!-- ลิงก์เมนูภายใน -->
+    <a class="font-headline-md text-xl text-primary border-b border-outline-variant/30 pb-3" href="#">หน้าแรก</a>
+    <a class="font-headline-md text-xl text-secondary hover:text-primary border-b border-outline-variant/30 pb-3" href="room.html">ห้องพัก</a>
+    <a class="font-headline-md text-xl text-secondary hover:text-primary border-b border-outline-variant/30 pb-3" href="facilities.html">สิ่งอำนวยความสะดวก</a>
+    <a class="font-headline-md text-xl text-secondary hover:text-primary border-b border-outline-variant/30 pb-3" href="contact.html">ติดต่อเรา</a>
+    
+    <button class="bg-primary text-on-primary w-full py-3 rounded-full font-label-lg mt-4 shadow-md">จองห้องพัก</button>
+</div>
+            <div class="flex justify-center gap-6 text-secondary text-sm pt-2">
+                <a href="tel:0840025137" class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">call</span> โทรหาเรา</a>
+                <a href="https://line.me/ti/p/~0840025137" target="_blank" class="flex items-center gap-1"><i class="fa-brands fa-line text-[16px]"></i> แอดไลน์</a>
+            </div>
+        </div>
+    </div>
+</header>
+
 <main class="mt-28 pb-section-gap">
     <header class="px-container-margin-mobile md:px-container-margin-desktop mb-12">
         <h1 class="font-headline-xl text-headline-xl text-primary mb-4">บ้านพักและห้องพักริมทะเลของเรา</h1>
@@ -386,14 +424,14 @@
 </footer>
 
 <script>
-    // เอฟเฟกต์ย่อเมนูบาร์ตอนสกรอลล์ลง
+    // เอฟเฟกต์ย่อเมนูบาร์ตอนสกรอลล์ลง (ปรับค่าความทึบตอนสกรอลล์ให้สอดคล้องกัน)
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
         if (window.scrollY > 50) {
-            header.classList.add('py-2', 'shadow-md');
-            header.classList.remove('py-4', 'shadow-sm');
+            header.classList.add('py-2', 'shadow-md', 'bg-surface/98');
+            header.classList.remove('py-4', 'bg-surface/95');
         } else {
-            header.classList.add('py-4', 'shadow-sm');
+            header.classList.add('py-4', 'bg-surface/98');
             header.classList.remove('py-2', 'shadow-md');
         }
     });
