@@ -431,32 +431,324 @@
         </div>
     </section>
 
-    <section class="px-5 md:px-container-margin-desktop py-section-gap relative">
-        <div class="max-w-4xl mx-auto bg-surface p-12 rounded-2xl cottage-shadow relative overflow-hidden border border-outline-variant/30">
-            <span class="material-symbols-outlined text-primary/10 text-[120px] absolute -top-4 -left-4">format_quote</span>
-            <div class="relative z-10">
-                <div class="flex items-center gap-4 mb-8">
-                    <img class="w-16 h-16 rounded-full object-cover ring-4 ring-secondary-container" alt="รีวิวจากลูกค้าจริง คลองวาฬ บีชรีสอร์ท" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb1xjEJc4VYDQtzNyTGXB94TbkGIX5OV5YGc00y4mdV-HnoYteieje4c-KE1RKu6Bj4b7kVNV4Iween-2a6b2kSdY1IwjU76hkxDFJcAU0dYNzqMqc9ywLw8AI87rEk7NbOQ4Kac73-B6Lq97HL_baoY0DbPtTyyvXUlxUx11Rdc8NqMrSns8nXCUZ6qSCsbAuChqc9D2KHrFHo1w1qxLk0SI1GM2JM5rw9g3zEDDPLowMKG_g-3dQIrB91LfwP4i-C77Sma03CBY"/>
-                    <div>
-                        <h4 class="font-headline-md text-[18px]">คุณณัฐพร และครอบครัว</h4>
-                        <div class="flex text-tertiary-container">
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+   <!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คลองวาฬ บีชรีสอร์ท - รีวิวและบทความท่องเที่ยว</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1d4ed8', // ตัวอย่างโทนสีน้ำเงินหลักของรีสอร์ท
+                        surface: '#ffffff',
+                        'on-surface': '#1e293b',
+                        'on-surface-variant': '#475569',
+                        'secondary-container': '#dbeafe',
+                        'tertiary-container': '#fef08a',
+                        'outline-variant': '#cbd5e1',
+                    },
+                    fontFamily: {
+                        sans: ['Sarabun', 'sans-serif'],
+                        headline: ['Anuphan', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .cottage-shadow {
+            box-shadow: 0 10px 30px -5px rgba(2, 48, 71, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+    <!-- ==================== SECTION: ALL REVIEWS (AUTO-SLIDE CAROUSEL) ==================== -->
+    <section class="px-5 md:px-16 py-16 relative bg-gradient-to-b from-blue-50/50 to-transparent overflow-hidden">
+        <div class="max-w-4xl mx-auto">
+            <!-- Section Title -->
+            <div class="text-center mb-12">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm block mb-2 font-headline">Guest Testimonials</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-on-surface font-headline">เสียงตอบรับจากครอบครัวผู้เข้าพักจริง</h2>
+                <p class="text-on-surface-variant mt-3 max-w-2xl mx-auto">ความประทับใจส่วนหนึ่งจากผู้เข้าพักที่ "คลองวาฬ บีชรีสอร์ท" กับช่วงเวลาพักผ่อนแสนอบอุ่นและสะดวกสบาย</p>
+            </div>
+
+            <!-- Slider Viewport -->
+            <div class="relative overflow-hidden cursor-grab active:cursor-grabbing rounded-2xl cottage-shadow" id="slider-container">
+                <!-- Slider Track -->
+                <div id="slider-track" class="flex transition-transform duration-700 ease-in-out" style="transform: translateX(0%);">
+
+                    <!-- Slide 1: คุณณัฐพร และครอบครัว -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="bg-surface p-8 md:p-12 relative overflow-hidden border border-outline-variant/30 flex flex-col justify-between h-full min-h-[380px] md:min-h-[320px]">
+                            <span class="material-symbols-outlined text-primary/10 text-[100px] md:text-[120px] absolute -top-4 -left-4 pointer-events-none select-none">format_quote</span>
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <img class="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover ring-4 ring-secondary-container" alt="รีวิวจากลูกค้าจริง คลองวาฬ บีชรีสอร์ท" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb1xjEJc4VYDQtzNyTGXB94TbkGIX5OV5YGc00y4mdV-HnoYteieje4c-KE1RKu6Bj4b7kVNV4Iween-2a6b2kSdY1IwjU76hkxDFJcAU0dYNzqMqc9ywLw8AI87rEk7NbOQ4Kac73-B6Lq97HL_baoY0DbPtTyyvXUlxUx11Rdc8NqMrSns8nXCUZ6qSCsbAuChqc9D2KHrFHo1w1qxLk0SI1GM2JM5rw9g3zEDDPLowMKG_g-3dQIrB91LfwP4i-C77Sma03CBY"/>
+                                    <div>
+                                        <h4 class="font-headline font-semibold text-[17px] md:text-[18px] text-on-surface">คุณณัฐพร และครอบครัว</h4>
+                                        <div class="flex text-amber-400">
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <blockquote class="text-[15px] md:text-[17px] italic text-on-surface-variant mb-6 leading-relaxed">
+                                    "ประทับใจมากค่ะ ทริปนี้พาคุณยายที่นั่งรถเข็นมาเที่ยวด้วย รีสอร์ทที่รองรับยากมาก แต่ที่นี่เดินรถเข็นได้สบายมาก มีทางลาดเชื่อมถึงกันหมด แถมตอนเย็นพวกเรายังไปซื้ออาหารทะเลสดจากตลาดใกล้ๆ มาทำปิ้งย่างทานกันตรงโต๊ะใหญ่ริมหาด บรรยากาศดี ตื่นเช้ามาวิวพระอาทิตย์ขึ้นก็สวยสะกดใจจริงๆ"
+                                </blockquote>
+                            </div>
+                            <div class="flex items-center gap-2 text-primary font-semibold text-xs uppercase tracking-wider relative z-10 border-t border-slate-100 pt-4">
+                                <span class="material-symbols-outlined text-sm">verified</span> รีวิวผู้เข้าพักจริงที่ประจวบฯ
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Slide 2: คุณธนากร และกลุ่มเพื่อน -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="bg-surface p-8 md:p-12 relative overflow-hidden border border-outline-variant/30 flex flex-col justify-between h-full min-h-[380px] md:min-h-[320px]">
+                            <span class="material-symbols-outlined text-primary/10 text-[100px] md:text-[120px] absolute -top-4 -left-4 pointer-events-none select-none">format_quote</span>
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <img class="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover ring-4 ring-secondary-container" alt="รีวิวคุณธนากร คลองวาฬ บีชรีสอร์ท" src="http://googleusercontent.com/image_collection/image_retrieval/10854542760578297693_0"/>
+                                    <div>
+                                        <h4 class="font-headline font-semibold text-[17px] md:text-[18px] text-on-surface">คุณธนากร และกลุ่มเพื่อน</h4>
+                                        <div class="flex text-amber-400">
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <blockquote class="text-[15px] md:text-[17px] italic text-on-surface-variant mb-6 leading-relaxed">
+                                    "สะดวกสบายเกินคาดเลยครับ รีสอร์ททำเลดีมาก ใกล้ร้านสะดวกซื้อแบบเดินไปนิดเดียวก็ถึง แถมตอนเช้ากับตอนเย็นได้ไปเดินตลาดชุมชนคลองวาฬ ได้สัมผัสวิถีชีวิตพื้นบ้านแท้ๆ ชาวบ้านน่ารักเป็นกันเองมาก ได้วัตถุดิบโลคอลกับขนมอร่อยๆ เพียบ แนะนำเลยสำหรับใครที่อยากได้ฟีลพักผ่อนชิลๆ แต่มีของกินเพียบตลอดวันครับ"
+                                </blockquote>
+                            </div>
+                            <div class="flex items-center gap-2 text-primary font-semibold text-xs uppercase tracking-wider relative z-10 border-t border-slate-100 pt-4">
+                                <span class="material-symbols-outlined text-sm">verified</span> รีวิวผู้เข้าพักจริงที่ประจวบฯ
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: คุณศิรินทรา และครอบครัว -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="bg-surface p-8 md:p-12 relative overflow-hidden border border-outline-variant/30 flex flex-col justify-between h-full min-h-[380px] md:min-h-[320px]">
+                            <span class="material-symbols-outlined text-primary/10 text-[100px] md:text-[120px] absolute -top-4 -left-4 pointer-events-none select-none">format_quote</span>
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <img class="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover ring-4 ring-secondary-container" alt="รีวิวคุณศิรินทรา คลองวาฬ บีชรีสอร์ท" src="http://googleusercontent.com/image_collection/image_retrieval/10854542760578297693_1"/>
+                                    <div>
+                                        <h4 class="font-headline font-semibold text-[17px] md:text-[18px] text-on-surface">คุณศิรินทรา และครอบครัว</h4>
+                                        <div class="flex text-amber-400">
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <blockquote class="text-[15px] md:text-[17px] italic text-on-surface-variant mb-6 leading-relaxed">
+                                    "เป็นจุดเริ่มต้นทริปที่ดีมากค่ะ พาลูกชายกับครอบครัวมาพัก ขับรถเที่ยวรอบๆ สะดวกมาก แป๊บเดียวถึงหมู่บ้านประมงคลองวาฬ ได้ดูวิถีชีวิตดั้งเดิมของชาวเล แถมยังใกล้แหล่งเรียนรู้สำคัญอย่างพิพิธภัณฑ์วิทยาศาสตร์หว้ากอ เด็กๆ สนุกกับอุโมงค์ปลามาก ตกบ่ายยังแวะไปเล่นน้ำที่อ่าวมะนาว หาดสะอาดและปลอดภัย ถือเป็นทำเลที่คุ้มค่ามากค่ะ"
+                                </blockquote>
+                            </div>
+                            <div class="flex items-center gap-2 text-primary font-semibold text-xs uppercase tracking-wider relative z-10 border-t border-slate-100 pt-4">
+                                <span class="material-symbols-outlined text-sm">verified</span> รีวิวผู้เข้าพักจริงที่ประจวบฯ
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <blockquote class="font-headline-md text-headline-md italic text-on-surface mb-8 leading-relaxed">
-                    "ประทับใจมากค่ะ ทริปนี้พาคุณยายที่นั่งรถเข็นมาเที่ยวด้วย รีสอร์ทที่รองรับยากมาก แต่ที่คลองวาฬบีชรีสอร์ทคือเดินรถเข็นได้สบายมาก มีทางลาดเชื่อมถึงกันหมด แถมตอนเย็นพวกเรายังไปซื้ออาหารทะเลสดจากตลาดใกล้ๆ มาทำปิ้งย่างทานกันตรงโต๊ะใหญ่ริมชายหาด บรรยากาศดี มีความสุขกันทุกคนเลยค่ะ ตื่นเช้ามาวิวพระอาทิตย์ขึ้นก็สวยสะกดใจจริงๆ"
-                </blockquote>
-                <div class="flex items-center gap-2 text-primary font-label-lg uppercase tracking-wider">
-                    <span class="material-symbols-outlined">verified</span> รีวิวผู้เข้าพักจริงที่ประจวบคีรีขันธ์
-                </div>
+            </div>
+
+            <!-- Slider Indicators (Dots) -->
+            <div class="flex justify-center items-center gap-2.5 mt-8" id="slider-dots">
+                <button class="slider-dot w-8 h-2.5 rounded-full bg-primary transition-all duration-300" aria-label="Go to slide 1"></button>
+                <button class="slider-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all duration-300" aria-label="Go to slide 2"></button>
+                <button class="slider-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all duration-300" aria-label="Go to slide 3"></button>
             </div>
         </div>
     </section>
+
+    <!-- ==================== SECTION: DESIGNED ARTICLE ==================== -->
+    <article class="px-5 md:px-16 py-16 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <!-- Article Header -->
+            <header class="text-center mb-12">
+                <p class="text-blue-600 font-bold tracking-widest text-xs uppercase mb-3 font-headline">Travel Guide & Insights</p>
+                <h1 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight mb-4 font-headline">
+                    ชีวิตดีๆ ที่ลงตัว: พักสโลว์ไลฟ์ ใกล้ชิดวิถีชุมชน และแลนด์มาร์คดังที่ "คลองวาฬ บีชรีสอร์ท"
+                </h1>
+                <div class="flex items-center justify-center gap-3 text-slate-500 text-sm mt-4">
+                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">calendar_today</span> 14 กรกฎาคม 2026</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_mall</span> อัปเดตที่เที่ยวประจวบฯ</span>
+                </div>
+            </header>
+
+            <!-- Main Image Placeholder (If any) -->
+            <div class="w-full h-[320px] md:h-[450px] bg-blue-100 rounded-2xl mb-12 overflow-hidden relative flex items-center justify-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent z-10"></div>
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');"></div>
+                <div class="relative z-20 text-white text-center px-6">
+                    <h2 class="text-2xl md:text-3xl font-bold font-headline mb-2">พักคลองวาฬ เที่ยวครบจบในที่เดียว</h2>
+                    <p class="text-sm md:text-base opacity-90">เชื่อมต่อไลฟ์สไตล์ชุมชนพื้นบ้านและสถานที่ท่องเที่ยวระดับประเทศ</p>
+                </div>
+            </div>
+
+            <!-- Article Body -->
+            <div class="prose max-w-none text-slate-700 leading-relaxed space-y-8 text-base md:text-lg">
+                <p>
+                    หลายครั้งที่การเดินทางท่องเที่ยวริมทะเลมักจะถูกจำกัดอยู่เพียงแค่การนอนเล่นในห้องพักหรือเดินเล่นริมชายหาดอันเงียบสงบ แต่ที่ <strong>“คลองวาฬ บีชรีสอร์ท”</strong> เราขอมอบประสบการณ์พักผ่อนที่พิเศษยิ่งกว่า ด้วยทำเลที่ตั้งอันโดดเด่นซึ่งผสานเอา <strong>ความเงียบสงบเป็นส่วนตัว</strong>, <strong>วิถีชีวิตดั้งเดิมของชุมชนพื้นบ้าน</strong> และ <strong>ความสะดวกสบายของการท่องเที่ยวเดินทาง</strong> เข้าไว้ด้วยกันได้อย่างลงตัวที่สุด
+                </p>
+
+                <!-- Grid Feature 1: Local Life -->
+                <div class="bg-slate-50 p-6 md:p-8 rounded-xl border border-slate-200/60 my-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">storefront</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-900 font-headline">1. สะดวกสบาย รายล้อมด้วยกริ่นอายพื้นบ้าน</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4">
+                        เพียงไม่กี่ก้าวจากความเงียบสงบในรีสอร์ท คุณจะพบกับความอุ่นใจด้วย <strong>ร้านสะดวกซื้อที่เปิดบริการตลอด 24 ชั่วโมง</strong> ช่วยตอบโจทย์ทุกความต้องการยามค่ำคืน แต่ไฮไลท์ที่ห้ามพลาดคือการได้ตื่นเช้าไปเดินลัดเลาะใน <strong>ตลาดเช้าคลองวาฬ</strong> ชิมชากาแฟโบราณรสเข้ม ขนมท้องถิ่นสูตรดั้งเดิม และพอตกเย็นก็ชวนครอบครัวไปเยือน <strong>ตลาดเย็นคลองวาฬ</strong> แหล่งรวมอาหารทะเลสดๆ ที่ชาวบ้านเพิ่งนำขึ้นจากเรือประมง ให้คุณเลือกซื้อกลับมาปิ้งย่างทานกันริมชายหาดในบรรยากาศส่วนตัวแสนอบอุ่น
+                    </p>
+                </div>
+
+                <!-- Grid Feature 2: Attractions -->
+                <div class="bg-slate-50 p-6 md:p-8 rounded-xl border border-slate-200/60 my-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">explore</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-900 font-headline">2. ปักหมุดแลนด์มาร์คสำคัญ เดินทางง่ายและใกล้กว่าที่คิด</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4">
+                        สำหรับสายกิจกรรมและครอบครัวที่ชื่นชอบการออกเดินทางท่องเที่ยว รีสอร์ทของเราคือจุดเริ่มต้นที่ดีที่สุดด้วยระยะทางที่ใกล้กับสถานที่ท่องเที่ยวสำคัญรอบทิศทาง:
+                    </p>
+                    <ul class="space-y-3 pl-4 list-disc text-sm md:text-base text-slate-600">
+                        <li><strong>วิถีประมงคลองวาฬ:</strong> สัมผัสความงามของหมู่บ้านชาวเล ถ่ายภาพเรือประมงไม้ขุดโบราณที่หาชมได้ยาก</li>
+                        <li><strong>อุทยานวิทยาศาสตร์และพิพิธภัณฑ์สัตว์น้ำหว้ากอ:</strong> ตื่นตากับอุโมงค์โลกใต้น้ำ แหล่งเรียนรู้ที่เติมเต็มจินตนาการให้เด็กๆ และทุกคนในครอบครัวได้อย่างเพลิดเพลิน</li>
+                        <li><strong>อ่าวมะนาว:</strong> ชายหาดรูปพระจันทร์เสี้ยวที่ขึ้นชื่อเรื่องความสะอาด ปลอดภัย น้ำนิ่งใส คลื่นลมสงบ เหมาะแก่การลงเล่นน้ำและทำกิจกรรมริมหาด</li>
+                    </ul>
+                </div>
+
+                <p class="text-center font-headline font-semibold text-lg md:text-xl text-primary my-8">
+                    "ให้ คลองวาฬ บีชรีสอร์ท เป็นบ้านพักหลังที่สองของคุณ ที่ซึ่งความสะดวกสบายและธรรมชาติมารวมตัวกันเพื่อสร้างวันหยุดที่ดีที่สุด"
+                </p>
+            </div>
+        </article>
+
+    <!-- ==================== JAVASCRIPT FOR AUTOSLIDE CAROUSEL ==================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.getElementById('slider-track');
+            const container = document.getElementById('slider-container');
+            const dots = document.querySelectorAll('.slider-dot');
+            const slidesCount = track.children.length;
+            let currentIndex = 0;
+            let autoPlayInterval;
+            
+            // Function to change slides
+            function updateSlider(index) {
+                currentIndex = index;
+                // Move track leftward
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update active dots styling
+                dots.forEach((dot, idx) => {
+                    if (idx === currentIndex) {
+                        dot.classList.add('bg-primary', 'w-8');
+                        dot.classList.remove('bg-slate-300', 'w-2.5');
+                    } else {
+                        dot.classList.remove('bg-primary', 'w-8');
+                        dot.classList.add('bg-slate-300', 'w-2.5');
+                    }
+                });
+            }
+
+            // Next Slide Trigger
+            function nextSlide() {
+                let nextIndex = (currentIndex + 1) % slidesCount;
+                updateSlider(nextIndex);
+            }
+
+            // Setup Auto Play
+            function startAutoPlay() {
+                stopAutoPlay(); // Prevention of duplicate intervals
+                autoPlayInterval = setInterval(nextSlide, 4000); // Transitions every 4 seconds
+            }
+
+            function stopAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                }
+            }
+
+            // Dot indicator Click actions
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    updateSlider(index);
+                    startAutoPlay(); // reset timer on click
+                });
+            });
+
+            // Pause autoplay on Hover & Touch start for readability
+            container.addEventListener('mouseenter', stopAutoPlay);
+            container.addEventListener('mouseleave', startAutoPlay);
+
+            // Touch Swipe Implementation (for Mobile)
+            let startX = 0;
+            let isDragging = false;
+
+            container.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+                stopAutoPlay();
+            }, { passive: true });
+
+            container.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+            }, { passive: true });
+
+            container.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+                const endX = e.changedTouches[0].clientX;
+                const deltaX = startX - endX;
+
+                // Threshold of 50px to register a swipe gesture
+                if (Math.abs(deltaX) > 50) {
+                    if (deltaX > 0) {
+                        // Swiped Left -> Show Next Slide
+                        let nextIndex = (currentIndex + 1) % slidesCount;
+                        updateSlider(nextIndex);
+                    } else {
+                        // Swiped Right -> Show Previous Slide
+                        let prevIndex = (currentIndex - 1 + slidesCount) % slidesCount;
+                        updateSlider(prevIndex);
+                    }
+                }
+                isDragging = false;
+                startAutoPlay();
+            });
+
+            // Initialize Auto Play
+            startAutoPlay();
+        });
+    </script>
+</body>
+</html>
 
     <section class="px-5 md:px-container-margin-desktop py-12">
         <div class="max-w-6xl mx-auto bg-surface p-6 md:p-8 rounded-2xl cottage-shadow border border-outline-variant/20">
